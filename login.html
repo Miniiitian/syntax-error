@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {background-image: url('login2.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+     
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #login-container {
+            background: #ffffffa8; /* Sky blue background */
+            border: 2px solid #ccc; /* Grayish border */
+            border-radius: 10px;
+            padding: 100px;
+            width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333; /* Text color */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        #login-button {
+            background: #0074D9; /* Button background color */
+            color: #fff; /* Button text color */
+            border: #fff;
+            padding: 10px 25px;
+            border-radius: 15px;
+            cursor: pointer;
+            
+        }
+
+        #login-button:hover {
+            background: #0056b3; /* Button background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container"><h1>
+        <p style="font-size: 40px;">Login For Vloging</p></h1>
+
+        <form action="home.html">
+            <label for="username"><p style="font-size:20px">Username:</p></label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password"><p style="font-size:20px">Password:</p></label>
+            <input type="password" id="password" name "password" required>
+            <br>
+            <br>
+            <br>
+
+            <input type="submit" id="login-button" value="Login">
+        </form>
+    </div>
+</body>
+</html>

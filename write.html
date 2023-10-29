@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Post</title>
+    <style>
+        body {background-image: url('homeimg.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+     
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .editor {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor">
+        <h1>Create a Blog Post</h1>
+        <form id="blogForm">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" required></textarea><br>
+
+            <label for="image">Upload Image:</label><br>
+            <input type="file" id="image" name="image" accept="image/*"><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript can be used to handle form submission and additional functionality
+        document.getElementById("blogForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting (for demonstration purposes)
+
+            // You can add code here to handle form submission, image upload, etc.
+            // For example, you can use JavaScript to process and send the form data to a server.
+            // You can also handle image uploads using FileReader API.
+
+            // For this example, let's just alert the data as a demonstration.
+            const formData = new FormData(this);
+            alert("Title: " + formData.get("title") + "\nContent: " + formData.get("content"));
+        });
+    </script>
+</body>
+</html>
